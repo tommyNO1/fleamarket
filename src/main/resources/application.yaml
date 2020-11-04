@@ -1,0 +1,43 @@
+#服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /fleamarket
+
+#JDBC配置
+jdbc:
+  driver: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/o2o?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+  username: work
+  password: mysql_work
+
+#Redis配置
+redis:
+  hostname: 118.31.50.77
+  port: 6379
+  maxTotal: 100
+  maxIdle: 20
+  maxWaitMillis: 3000
+  testOnBorrow: true
+
+#SpringMVC配置
+spring:
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:D:/projectdev/image/
+
+#Kaptcha配置
+kaptcha:
+  border: "no"
+  textproducer:
+    font:
+      color: red
+      size: 43
+      names: Arial
+    char:
+      string: ACDEFHKPRSTWX345679
+      length: 4
+  image:
+    width: 135
+    height: 50
+  noise:
+    color: black
